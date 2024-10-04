@@ -1,7 +1,12 @@
 import appConfig from "crate/appconfig.json";
 import Link from "next/link";
 
+import { GetYearsFromNow } from "@/utils/get-years-from-now";
+
 export default function AboutMePage() {
+  const kaioBirthday = new Date("07/17/2005");
+  const kaioAge = GetYearsFromNow(kaioBirthday);
+
   return (
     <main className="
         flex-1 max-w-[866px] w-[calc(100%_-_48px)] mx-auto flex flex-col justify-center
@@ -14,7 +19,7 @@ export default function AboutMePage() {
         "
       >
         <p>
-          Tenho 19 anos, e durante todo esse tempo venho vivendo em Campo Mourão.
+          Tenho {kaioAge} anos, e durante todo esse tempo venho vivendo em Campo Mourão.
           Hoje, sou um graduando em Ciência da Computação pela UTFPR-CM. Há dois anos,
           venho estudando e me aprofundando cada vez mais em ambos os polos
           do desenvolvimento web: front e back-end.
