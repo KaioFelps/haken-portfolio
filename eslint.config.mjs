@@ -1,5 +1,5 @@
-import config from "@rocketseat/eslint-config/react.mjs" ;
-import simpleImportSort from "eslint-plugin-simple-import-sort" ;
+import config from "@rocketseat/eslint-config/react.mjs";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
 
 export default [
   ...config,
@@ -15,13 +15,15 @@ export default [
       "@stylistic/jsx-closing-tag-location": "error",
       "@stylistic/jsx-first-prop-new-line": ["error", "multiprop"],
       "@stylistic/jsx-function-call-newline": ["error", "always"],
-      "@stylistic/semi-spacing": ["error", { before: true, after: true }],
       "@stylistic/semi": ["error", "always"],
       "@stylistic/jsx-quotes": ["error", "prefer-double"],
       "@stylistic/quotes": ["error", "double"],
       "@stylistic/jsx-max-props-per-line": ["error", {
         maximum: 1,
       }],
+      "@stylistic/max-len": ["warn", 100],
+      "@typescript-eslint/no-unused-vars": "warn",
+      "no-unused-vars": "warn",
     },
   },
-] ;
+];
