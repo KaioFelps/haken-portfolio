@@ -26,6 +26,10 @@
           hover:bg-blue-600 active:brightness-95 transition-all duration-100 cursor-default
   }
 
+  .button.lg {
+    @apply p-[14px] text-base
+  }
+
   .heading {
     @apply font-black text-blue-500 text-6xl
   }
