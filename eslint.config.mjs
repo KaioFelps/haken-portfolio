@@ -22,8 +22,10 @@ export default [
         maximum: 1,
       }],
       "@stylistic/max-len": ["warn", 100],
-      "@typescript-eslint/no-unused-vars": "warn",
-      "no-unused-vars": "warn",
+      "@typescript-eslint/no-unused-vars": [
+        "warn", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
+      "no-unused-vars": ["warn", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
     },
   },
 ];
