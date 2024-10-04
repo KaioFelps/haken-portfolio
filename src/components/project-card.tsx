@@ -12,19 +12,23 @@ export function ProjectCard(project: Project) {
         p-6 rounded-[20px] bg-white/10 ring-1 ring-inset ring-white/10
         flex flex-row gap-6
         backdrop-blur-2xl shadow-[rgba(78_0_105/0.2)] shadow-[0_2px_10px_0]
+        max-md:flex-col max-xs:p-6
     "
     >
       <img
         src={project.coverPath}
         alt=""
-        className="max-w-72 object-cover object-center rounded-2xl h-auto"
+        className="
+            max-w-72 object-cover object-center rounded-2xl h-auto
+            max-md:max-w-none max-md:max-h-48
+            "
       />
 
-      <div className="p-12">
-        <h2 className="font-black text-white text-5xl mb-3">{project.title}</h2>
-        <p className="text-xl text-white/60 mb-6">{project.summary}</p>
+      <div className="p-12 max-xs:p-4">
+        <h2 className="font-black text-white text-5xl max-sm:text-2xl mb-3">{project.title}</h2>
+        <p className="text-xl max-xs:text-lg text-white/60 mb-6">{project.summary}</p>
 
-        <div className="flex items-start gap-2.5 justify-start">
+        <div className="flex items-start gap-2.5 justify-start flex-wrap">
           {project.links.map(link => ProjectLink(project.id, link))}
         </div>
       </div>
@@ -40,7 +44,7 @@ function ProjectLink(projectId: number, link: Link) {
         href={link.href}
         target="_blank"
         rel="noreferrer"
-        className="button lg"
+        className="button xs:lg"
       >
         <IconBrandGithubFilled size={24} />
         Código fonte no github
@@ -58,7 +62,7 @@ function ProjectLink(projectId: number, link: Link) {
     <LinkC
       key={`${projectId}_link_${link.href}`}
       href={link.href}
-      className="button lg"
+      className="button xs:lg"
       target={link.external
         ? "_blank"
         : undefined}
