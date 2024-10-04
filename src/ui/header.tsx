@@ -35,12 +35,13 @@ export function Header() {
       "p-6 flex items-center justify-between mb-28 sticky top-0 transition-all duration-200",
       "border-b border-transparent",
       !hasScrolledDown && "bg-transparent",
-      hasScrolledDown && "bg-white/[1%] backdrop-blur-lg border-white/5",
+      hasScrolledDown && "bg-white/[1%] border-white/5 z-50 backdrop-blur-3xl",
     )}
     >
       <img
         src={Logo.src}
         alt="Kaio Felipe"
+        className="max-xs:hidden"
       />
 
       <nav className={clsx(
@@ -48,6 +49,9 @@ export function Header() {
         "prose-a:text-white/60 hover:prose-a:text-white/70 active:prose-a:text-white/80",
         "data-[active=true]:prose-a:text-white prose-a:transition-all prose-a:duration-100",
         "prose-a:text-sm prose-a:cursor-default prose-a:font-medium",
+        "max-xs:w-full max-xs:prose-a:flex-1 max-xs:prose-a:text-center",
+        "max-xs:hover:prose-a:bg-white/5 max-xs:prose-a:px-5 max-xs:prose-a:py-2.5",
+        "max-xs:p-0 max-xs:gap-0 max-xs:overflow-hidden",
       )}
       >
         {routes.map(([path, label]) => (
