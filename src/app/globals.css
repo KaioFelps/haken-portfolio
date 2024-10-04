@@ -25,4 +25,8 @@
     @apply p-[7px] rounded-[10px] bg-blue-500 text-white text-sm font-medium flex items-center justify-center gap-2.5
           hover:bg-blue-600 active:brightness-95 transition-all duration-100 cursor-default
   }
+
+  .heading {
+    @apply font-black text-blue-500 text-6xl
+  }
 }
