@@ -1,8 +1,8 @@
-import { dataStore } from "@/app/layout";
 import { ProjectCard } from "@/components/project-card";
+import { DataStore } from "@/core/datastore";
 
 export default function ProjectsPage() {
-  const projects = dataStore.getProjects();
+  const projects = DataStore.getProjects();
 
   return (
     <main className="
