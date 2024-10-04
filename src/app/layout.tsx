@@ -20,8 +20,7 @@ export const metadata: Metadata = {
   description: "Desenvolvedor de software!",
 };
 
-export const config = await import("crate/appconfig.json");
-export const dataStore = await DataStore.initialize();
+await DataStore.initialize();
 
 type LayoutProps = {
   children: React.ReactNode

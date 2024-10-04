@@ -1,7 +1,6 @@
 import { IconBrandGithubFilled, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons-react";
 import clsx from "clsx";
-
-import { config } from "@/app/layout";
+import appConfig from "crate/appconfig.json";
 
 export function Footer() {
   return (
@@ -13,7 +12,7 @@ export function Footer() {
       <Copyright className="max-xs:hidden" />
       <div className="flex gap-2.5">
         <a
-          href={config.socials.github}
+          href={appConfig.socials.github}
           target="_blank"
           className="button"
           rel="noreferrer"
@@ -22,7 +21,7 @@ export function Footer() {
           GitHub
         </a>
         <a
-          href={config.socials.linkedin}
+          href={appConfig.socials.linkedin}
           target="_blank"
           className="button"
           rel="noreferrer"
@@ -31,7 +30,7 @@ export function Footer() {
           Linkedin
         </a>
         <a
-          href={config.socials.instagram}
+          href={appConfig.socials.instagram}
           target="_blank"
           className="button"
           rel="noreferrer"

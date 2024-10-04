@@ -1,6 +1,5 @@
+import appConfig from "crate/appconfig.json";
 import Link from "next/link";
-
-import { config } from "@/app/layout";
 
 export default function AboutMePage() {
   return (
@@ -32,7 +31,7 @@ export default function AboutMePage() {
           </Link>! Você pode conferir tudo e mais
           um pouco no meu {" "}
           <a
-            href={config.socials.github}
+            href={appConfig.socials.github}
             target="_blank"
             rel="noreferrer"
             className="link"
