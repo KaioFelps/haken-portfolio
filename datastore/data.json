@@ -1,0 +1,36 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "inertia-rust",
+            "summary": "Um server-side adapter de Inertia para aplicações web feitas com Rust. Extraia o melhor do seu framework web sem abrir mão da simplicidade de um software MVC. Este adaptador pretende implementar todos os protocólos e requisitos da biblioteca Inertia.js.",
+            "coverPath": "/project-covers/inertia-rust-cover.png",
+            "links": [
+                {
+                    "href": "https://github.com/KaioFelps/inertia-rust",
+                    "external": true,
+                    "github": true
+                },
+                {
+                    "href": "https://inertiajs.com/",
+                    "external": true,
+                    "github": false,
+                    "label": "Site do Inertia.js"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "hubbitos-api",
+            "summary": "Api de um fã-site de Habbo escrito em Rust, utilizando o framework web Actix-Web.",
+            "coverPath": "/project-covers/hubbitos-api-cover.png",
+            "links": [
+                {
+                    "href": "https://github.com/KaioFelps/hubbitos-api",
+                    "external": true,
+                    "github": true
+                }
+            ]
+        }
+    ]
+}
