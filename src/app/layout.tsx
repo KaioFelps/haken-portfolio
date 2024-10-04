@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import React from "react";
 
+import { DataStore } from "@/core/datastore";
+
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   display: "auto",
@@ -18,7 +20,8 @@ export const metadata: Metadata = {
   description: "Desenvolvedor de software!",
 };
 
-export const config = await import("@/../appconfig.json");
+export const config = await import("crate/appconfig.json");
+export const dataStore = await DataStore.initialize();
 
 type LayoutProps = {
   children: React.ReactNode
@@ -26,7 +29,10 @@ type LayoutProps = {
 
 export default function RootLayout({ children }: Readonly<LayoutProps>) {
   return (
-    <html lang="pt-Br" className="min-h-full h-full">
+    <html
+      lang="pt-Br"
+      className="min-h-full h-full"
+    >
       <body className={poppins.variable + "antialiased bg-background text-white min-h-full h-full"}>
         {children}
       </body>
