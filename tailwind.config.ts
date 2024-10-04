@@ -16,6 +16,10 @@ const config: Config = {
         "blue-500": "#00A3FF",
         "blue-600": "#0C95E2",
       },
+      screens: {
+        xs: "480px",
+        "2xs": "360px",
+      },
     },
   },
   plugins: [Typography()],
