@@ -4,19 +4,16 @@ type DataStorage = {
   projects: Project[]
 };
 
-export class DataStore {
-  private data: DataStorage;
-  private constructor(data: DataStorage) {
-    this.data = data;
-  }
+export abstract class DataStore {
+  private static data: DataStorage;
 
   public static async initialize() {
     const { default: _, ...data } = await import("crate/datastore/data.json");
 
-    return new DataStore(data as DataStorage);
+    this.data = (data as DataStorage);
   }
 
-  public getProjects(): Project[] {
+  public static getProjects(): Project[] {
     return this.data.projects;
   }
 }
