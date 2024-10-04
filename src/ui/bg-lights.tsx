@@ -5,7 +5,9 @@ export function BgLights() {
   return (
     <div
       aria-hidden="true"
-      className="absolute inset-0 overflow-hidden pointer-events-none"
+      className="
+        absolute inset-0 pointer-events-none max-h-full overflow-x-hidden overflow-y-visible
+        "
     >
       <img
         src={heart.src}
@@ -17,7 +19,7 @@ export function BgLights() {
         src={fern.src}
         alt=""
         aria-hidden="true"
-        className="absolute -bottom-60 -left-60"
+        className="absolute bottom-0 -left-60"
       />
     </div>
   );
