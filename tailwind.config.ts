@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss" ;
+import Typography from "@tailwindcss/typography";
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
@@ -17,6 +18,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
-} ;
-export default config ;
+  plugins: [Typography()],
+};
+export default config;
