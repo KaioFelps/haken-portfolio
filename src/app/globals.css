@@ -8,8 +8,21 @@
 
 @media (prefers-color-scheme: dark) {}
 
+@layer base {
+  .link {
+    @apply font-bold text-blue-500 hover:text-blue-600 transition-all duration-75 underline underline-offset-2
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .button {
+    @apply p-[7px] rounded-[10px] bg-blue-500 text-white text-sm font-medium flex items-center justify-center gap-2.5
+          hover:bg-blue-600 active:brightness-95 transition-all duration-100 cursor-default
   }
 }
