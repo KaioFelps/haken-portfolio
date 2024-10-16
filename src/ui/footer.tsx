@@ -2,6 +2,8 @@ import { IconBrandGithubFilled, IconBrandInstagram, IconBrandLinkedin } from "@t
 import clsx from "clsx";
 import appConfig from "crate/appconfig.json";
 
+import HakenLogo from "@/assets/haken-logo.png";
+
 export function Footer() {
   return (
     <footer className="
@@ -10,7 +12,20 @@ export function Footer() {
         "
     >
       <Copyright className="max-xs:hidden" />
+
       <div className="flex gap-2.5">
+        <a
+          href={appConfig.socials.hakenInstagram}
+          target="_blank"
+          className="button"
+          rel="noreferrer"
+        >
+          <img
+            src={HakenLogo.src}
+            width={24}
+          />
+          Haken
+        </a>
         <a
           href={appConfig.socials.github}
           target="_blank"
