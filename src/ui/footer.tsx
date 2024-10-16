@@ -8,12 +8,16 @@ export function Footer() {
   return (
     <footer className="
         flex items-center justify-between px-6 py-3 mt-28
-        max-xs:flex-col max-xs:justify-center max-xs:gap-3 max-xs:pb-12
+        max-sm:flex-col max-sm:justify-center max-sm:gap-3 max-sm:pb-12
         "
     >
       <Copyright className="max-xs:hidden" />
 
-      <div className="flex gap-2.5">
+      <div className="
+        flex gap-2.5
+        max-xs:grid max-xs:grid-cols-2 max-xs:grid-flow-row
+        "
+      >
         <a
           href={appConfig.socials.hakenInstagram}
           target="_blank"
