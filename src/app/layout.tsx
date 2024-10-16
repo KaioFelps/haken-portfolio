@@ -26,7 +26,7 @@ type LayoutProps = {
   children: React.ReactNode
 };
 
-export default function RootLayout({ children }: Readonly<LayoutProps>) {
+export default async function RootLayout({ children }: Readonly<LayoutProps>) {
   return (
     <html
       lang="pt-Br"

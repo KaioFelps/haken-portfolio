@@ -1,8 +1,8 @@
 import { ProjectCard } from "@/components/project-card";
 import { DataStore } from "@/core/datastore";
 
-export default function ProjectsPage() {
-  const projects = DataStore.getProjects();
+export default async function ProjectsPage() {
+  const projects = await DataStore.getProjects();
 
   return (
     <main className="
