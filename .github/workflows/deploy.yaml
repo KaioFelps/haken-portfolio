@@ -17,7 +17,7 @@ jobs:
                 cache: npm
             
             - name: Build the app
-              run: ./scripts/build.sh
+              run: chmod u+x ./scripts/build.sh ; ./scripts/build.sh
 
             - name: Setup Square Cloud CLI
               run: curl -fsSL https://cli.squarecloud.app/install | bash
