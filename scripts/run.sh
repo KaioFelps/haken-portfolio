@@ -16,7 +16,6 @@ swap_if_incoming() {
 swap_if_incoming public _public
 swap_if_incoming .next _next
 swap_if_incoming datastore _datastore
-swap_if_incoming scripts _scripts
 
 npm ci
 npm run start

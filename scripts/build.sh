@@ -8,10 +8,10 @@ fi
 
 mkdir $PACKAGE
 
+cp scripts/run.sh $PACKAGE
 cp -r .next $PACKAGE/_next
 cp package.json $PACKAGE
 cp package-lock.json $PACKAGE
-cp -r scripts $PACKAGE/_scripts
 cp -r datastore $PACKAGE/_datastore
 cp -r public $PACKAGE/_public
 cp next-env.d.ts $PACKAGE
