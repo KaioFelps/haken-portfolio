@@ -1,3 +1,4 @@
+npm ci
 npm run build
 
 PACKAGE=__package
