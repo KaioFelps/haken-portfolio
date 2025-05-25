@@ -24,5 +24,6 @@ jobs:
 
             - name: Commit to Square Cloud
               run: |
+                cd __package
                 squarecloud auth login --token=${{ secrets.SQUARE_TOKEN }}
                 squarecloud app commit -r ${{ secrets.SQUARE_APP_ID }}
